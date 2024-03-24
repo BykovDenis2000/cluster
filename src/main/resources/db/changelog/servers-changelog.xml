@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+
+    <changeSet id="1711271146075-1" author="dbykov">
+        <createTable tableName="servers">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="free_ram" type="integer"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1711272521203-1" author="dbykov">
+        <insert tableName="servers">
+            <column name="id" valueNumeric="1"/>
+            <column name="free_ram" valueNumeric="128"/>
+        </insert>
+        <insert tableName="servers">
+            <column name="id" valueNumeric="2"/>
+            <column name="free_ram" valueNumeric="128"/>
+        </insert>
+        <insert tableName="servers">
+            <column name="id" valueNumeric="3"/>
+            <column name="free_ram" valueNumeric="128"/>
+        </insert>
+        <insert tableName="servers">
+            <column name="id" valueNumeric="4"/>
+            <column name="free_ram" valueNumeric="128"/>
+        </insert>
+        <insert tableName="servers">
+            <column name="id" valueNumeric="5"/>
+            <column name="free_ram" valueNumeric="128"/>
+        </insert>
+        <insert tableName="servers">
+            <column name="id" valueNumeric="6"/>
+            <column name="free_ram" valueNumeric="128"/>
+        </insert>
+    </changeSet>
+
+
+</databaseChangeLog>
