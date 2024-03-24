@@ -1,4 +1,16 @@
 services:
+  client-backend:
+    image: client:0.0.1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9024:9024"
+    depends_on:
+      - postgres
+    environment:
+      - SERVER_PORT= 9024
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres/mydatabase
   postgres:
     image: 'postgres:latest'
     environment:
